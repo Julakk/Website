@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHMAD STORE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Top Up Game Online</h1>
+    </header>
+
+    <main>
+        <section class="container">
+            <label for="game">Pilih Game:</label>
+            <select id="game" onchange="updateTable()">
+                <option value="ml">Mobile Legends</option>
+                <option value="ff">Free Fire</option>
+                <option value="pubg">PUBG Mobile</option>
+                <option value="genshin">Genshin Impact</option>
+                <option value="valorant">Valorant</option>
+                <option value="codm">Call of Duty Mobile</option>
+            </select>
+
+            <h3>Masukkan User ID</h3>
+            <input type="text" id="userId" placeholder="Masukkan User ID Anda" required>
+
+            <h3>Pilih Jumlah Diamond</h3>
+            <div id="diamondGrid" class="diamond-grid"></div>
+
+<!-- Pilihan Metode Pembayaran -->
+<div id="paymentContainer">
+    <h3>Pilih Metode Pembayaran</h3>
+    <div class="payment-grid">
+        <div class="payment-item" onclick="selectPayment('Dana')">
+            <img src="https://example.com/dana-logo.png" alt="Dana">
+            <p>Dana</p>
+        </div>
+        <div class="payment-item" onclick="selectPayment('GoPay')">
+            <img src="https://example.com/gopay-logo.png" alt="GoPay">
+            <p>GoPay</p>
+        </div>
+    </div>
+</div>
+
+<!-- Tombol Checkout -->
+<button id="buyButton" disabled onclick="proceedToPayment()">Beli Sekarang</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

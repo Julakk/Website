@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: rgb(24, 6, 6);
+    transition: background 0.5s ease-in-out;
+}
+
+/* Background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px); /* Agar teks tetap terlihat jelas */
+    z-index: -1;
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Container utama */
+.container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+/* Input dan select */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: black;
+}
+
+/* Grid untuk pilihan diamond */
+.diamond-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.diamond-item {
+    background: white;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.diamond-item:hover {
+    border-color: #007bff;
+    transform: scale(1.05);
+}
+
+.diamond-item.selected {
+    border-color: #28a745;
+    background: #28a745;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Tombol beli */
+button {
+    width: 100%;
+    background: #28a745;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+
+.payment-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.payment-item {
+    background: white;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 120px;
+}
+
+.payment-item:hover {
+    border-color: #007bff;
+    transform: scale(1.05);
+}
+
+.payment-item.selected {
+    border-color: #28a745;
+    background: #28a745;
+    color: white;
+}
+
+.payment-item img {
+    width: 60px;
+    margin-bottom: 5px;
+}
