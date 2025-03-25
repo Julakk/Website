@@ -1,10 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    margin: 0;
-    padding: 0;
-    color: rgb(24, 6, 6);
-    transition: background 0.5s ease-in-out;
+    background: #f4f4f4;
 }
 
 /* Background */
@@ -23,10 +20,10 @@ body::before {
 
 /* Header */
 header {
-    background: rgba(0, 0, 0, 0.7);
+    background: #007bff;
     padding: 15px;
+    color: white;
     font-size: 24px;
-    font-weight: bold;
 }
 
 /* Container utama */
